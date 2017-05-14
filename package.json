@@ -1,7 +1,7 @@
 {
     "name": "angular2-tutorial-cardtask",
     "version": "1.0.0",
-    "description": "Sagan Marketing, LLC Angular 2 Seed Project",
+    "description": "Sagan Marketing, LLC Angular 2 Tutorial Card Task",
     "scripts": {
         "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
         "lite": "lite-server",
