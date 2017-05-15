@@ -11,7 +11,46 @@
         <link rel="stylesheet" href="css/site.css" />
     </head>
     <body>
-        <ng2-app>Loading...</ng2-app>
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Card Task</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation. We hide it in small screens. -->
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <a class="mdl-navigation__link" href="/">Home</a>
+                </nav>
+                </div>
+            </header>
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title">Card Task</span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="/">Home</a>
+                </nav>
+            </div>
+            <main class="mdl-layout__content">
+                <div class="page-content">
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col">
+                            <div class="card-wide mdl-card mdl-shadow--2dp dark-background">
+                                <div class="mdl-card__supporting-text">
+                                    <ng2-app>Loading...</ng2-app>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--4-col"></div>
+                    <div class="mdl-cell mdl-cell--4-col"></div>
+                    <div class="mdl-cell mdl-cell--4-col">&copy; Sagan Marketing, LLC</div>
+                </div>
+            </footer>
+        </div>
 
         <script src="node_modules/core-js/client/shim.min.js"></script>
         <script src="node_modules/zone.js/dist/zone.js"></script>
