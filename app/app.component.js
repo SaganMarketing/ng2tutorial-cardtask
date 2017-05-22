@@ -10,15 +10,22 @@ var core_1 = require("@angular/core");
 var task_1 = require("./models/task");
 var AppComponent = (function () {
     function AppComponent() {
-        this.task1 = new task_1.Task("The Task Title", false);
+        this.newTask = new task_1.Task();
+        this.tasks = [];
     }
+    AppComponent.prototype.addNewTask = function () {
+        var task = new task_1.Task(this.newTask.details);
+        this.tasks.push(task);
+        this.newTask = new task_1.Task();
+    };
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'ng2-app',
-        templateUrl: 'app.component.html'
+        templateUrl: 'app.component.html',
+        styleUrls: ['app.component.css']
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;

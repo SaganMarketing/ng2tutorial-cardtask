@@ -10,4 +10,8 @@ import { Task } from '../models/task';
 })
 export class CardComponent {
     @Input() task: Task;
+
+    toggleCompleted() {
+        this.task.isCompleted = !this.task.isCompleted;
+    }
 }

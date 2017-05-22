@@ -5,8 +5,18 @@ import { Task } from './models/task';
 @Component({
     moduleId: module.id,
     selector: 'ng2-app',
-    templateUrl: 'app.component.html'
+    templateUrl: 'app.component.html',
+    styleUrls: [ 'app.component.css' ]
 })
 export class AppComponent {
-    task1: Task = new Task("The Task Title", false);
+    private newTask: Task = new Task();
+
+    private tasks: Task[] = [];
+
+    addNewTask() {
+        let task = new Task(this.newTask.details)
+        this.tasks.push(task);
+        
+        this.newTask = new Task();
+    }
  }

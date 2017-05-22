@@ -13,9 +13,11 @@
             '@angular/http': 'npm:@angular/http/bundles/http.umd.js',
             '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
             '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
-
+            
             'rxjs': 'npm:rxjs',
-            'angular-in-memory-web-api': 'npm:angular-in-memory-web-api'
+            'angular-in-memory-web-api': 'npm:angular-in-memory-web-api',
+
+            'ng2-mdl': 'npm:ng2-mdl'
         },
         packages: {
             app: {
@@ -23,6 +25,10 @@
                 defaultExtension: 'js'
             },
             rxjs: {
+                defaultExtension: 'js',
+            },
+            'ng2-mdl': {
+                main: './ng2-mdl.js',
                 defaultExtension: 'js',
             },
             'angular-in-memory-web-api': {

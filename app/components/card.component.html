@@ -1,13 +1,19 @@
-<div class="mdl-cell mdl-cell--3-col">
-    <div class="card-wide mdl-card mdl-shadow--2dp">
-        <div class="mdl-card__supporting-text">
-            {{ task.details }}
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-            <span class="mdl-chip mdl-chip--deletable">
-                <span class="mdl-chip__text">Not Complete</span>
-                <button type="button" class="mdl-chip__action"><i class="material-icons">cancel</i></button>
-            </span>
-        </div>
+<div class="card-wide mdl-card" [class.mdl-shadow--2dp]="!task.isCompleted">
+    <div class="mdl-card__supporting-text">
+        {{ task.details }}
+    </div>
+    <div class="mdl-card__actions mdl-card--border" *ngIf="!task.isCompleted">
+        <span class="mdl-chip mdl-chip--deletable">
+            <span class="mdl-chip__text">Mark as Complete</span>
+            <button type="button" class="mdl-chip__action" (click)="toggleCompleted()"
+                ><i class="material-icons">cancel</i></button>
+        </span>
+    </div>
+    <div class="mdl-card__actions mdl-card--border" *ngIf="task.isCompleted">
+        <span class="mdl-chip mdl-chip--deletable">
+            <span class="mdl-chip__text">Task is Complete</span>
+            <button type="button" class="mdl-chip__action" (click)="toggleCompleted()"
+                ><i class="material-icons">check</i></button>
+        </span>
     </div>
 </div>

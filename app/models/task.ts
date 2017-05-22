@@ -1,3 +1,4 @@
 export class Task {
-    constructor(public details: string, public isCompleted: boolean){}
+    constructor(public details: string = null, 
+                public isCompleted: boolean = false){}
 }

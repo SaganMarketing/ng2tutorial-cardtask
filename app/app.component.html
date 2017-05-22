@@ -1,1 +1,17 @@
-<card [task]='task1' class="mdl-grid full-width"></card>
+<div class="mdl-grid">
+    <div class="mdl-layout-spacer"></div>
+    <div class="mdl-cell mdl-cell--6-col">
+        <form action="#" #taskForm="ngForm">
+            <md-input placeholder="New task details..." type="text" required
+                [(ngModel)]="newTask.details" name="taskDetails"></md-input>
+            <mdlButton color="primary" (click)="addNewTask()" [disabled]="taskForm.form.invalid"
+                ><i class="material-icons">add</i> Add New Task</mdlButton>
+        </form>
+    </div>
+    <div class="mdl-layout-spacer"></div>
+</div>
+<div class="mdl-grid">
+    <h5 *ngIf="!tasks.length" class="mdl-cell mdl-cell--12-col">Currently, there are no tasks. Why don't you add one?</h5>
+    <card *ngFor="let task of tasks" [task]="task" 
+        class="mdl-cell mdl-cell--3-col"></card>
+</div>
