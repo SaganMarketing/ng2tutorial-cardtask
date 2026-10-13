@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Sagan Marketing, LLC Angular 2 Tutorial Card Task",
   "scripts": {
-    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
-    "lite": "lite-server",
+    "start": "tsc && concurrently \"tsc -w\" \"npm run serve\" ",
+    "serve": "browser-sync start --server --single --files \"**/*.{html,htm,css,js}\" --no-notify",
     "tsc": "tsc",
     "watch": "tsc -w"
   },
@@ -36,7 +36,7 @@
     "@types/core-js": "0.9.36",
     "@types/node": "7.0.7",
     "concurrently": "3.1.0",
-    "lite-server": "2.3.0",
+    "browser-sync": "3.0.4",
     "typescript": "2.3.2"
   }
 }
